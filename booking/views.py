@@ -45,6 +45,8 @@ class BookingCreate(CreateView):
         form.add_error(None, 'Ups.....Something went wrong')
         return super().form_invalid(form)
 
+# to update a booking
+
 
 def update_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
@@ -60,6 +62,8 @@ def update_booking(request, booking_id):
         'form': form
     }
     return render(request, 'update_bookings.html', context)
+
+# delete a booking
 
 
 def delete_booking(request, booking_id):
