@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@300&display=swap');
+
+/*-The body and headings were inspired by the love Running Project by CI-*/
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+  }
+
+h1, h2 {
+    font-family: lato, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #252525;
+}
+
+/*-This was code used from CSS Button Hover Animation Effects using Only HTML & CSS-*/
+.submit-button {
+  width: 200px;
+  height: 50px;
+  border: 1px solid black;
+  background-color: grey;
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 0 #f9e506;
+  transition: ease-out 0.3s;
+  font-size: 1rem;
+  outline: none;
+}
+
+/*-This was code used from CSS Button Hover Animation Effects using Only HTML & CSS-*/
+.submit-button:hover {
+  color: #252525;
+  box-shadow: inset 200px 0 0 0 #f9e506;
+}
+
+.form {
+  margin: 150px 10% 0 0;
+  color: #252525;
+  background-color: #fff;
+  max-width: 400px;
+  position: absolute;
+  left: 10%;
+  padding: 30px;
+  border: 5px solid black;
+}
+
+.messages{
+  padding: 0.5em;
+  color: #fff;
+  background: lightgreen;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px);
+  transition: visibility 0s, opacity 250ms, transform 250ms;
+}
+
+
+.messages.hide{
+  padding: 0.5em;
+  color: #fff;
+  background: lightgreen;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: visibility 0s 250ms, opacity 250ms, transform 250ms;
+}
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: relative;
+  opacity: 1;
+  pointer-events: visible;
+}
