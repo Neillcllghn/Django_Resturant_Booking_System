@@ -12,9 +12,9 @@ def index(request):
 # This class view allows user to view their bookings in list format
 
 
-class BookingList(generic.ListView):
-    model = Booking
-    template_name = 'bookings.html'
+# class BookingList(generic.ListView):
+#     model = Booking
+#     template_name = 'bookings.html'
 
-    def get_queryset(self):
-        return Booking.objects.filter(user=self.request.user)
+#     def get_queryset(self):
+#         return Booking.objects.filter(user=self.request.user)
