@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h4 class="center-align">Your Bookings</h4>
+    <div class="container">
+    {% for booking in booking_list %}
+    <div class="divider"></div>
+    <div class="section">
+      {% if booking.approved %}
+        <h5><strong>Day:</strong> {{ booking.day }}</h5>
+        <p><strong>Name:</strong> {{ booking.user }}</p>
+        <p><strong>email:</strong> {{ booking.email }}</p>
+        <p><strong>No of people:</strong> {{ booking.group_size }}</p>
+        <p><strong>Time:</strong> {{ booking.time }}</p>
+        <p><strong>Status:</strong> Approved</p>
+      {% else %}
+          <h5>Booking pending Approval</h5>
+          <h5><strong>Day:</strong> {{ booking.day }}</h5>
+          <p><strong>Name:</strong> {{ booking.user }}</p>
+          <p><strong>email:</strong> {{ booking.email }}</p>
+          <p><strong>No of people:</strong> {{ booking.group_size }}</p>
+          <p><strong>Time:</strong> {{ booking.time }}</p>
+      {% endif %}
+
+    </div>
+    {% empty %}
+    <h5>You have nothing Booked!!</h5>
+    {% endfor %}
+    
+</div>
+
+
+{%endblock%}
